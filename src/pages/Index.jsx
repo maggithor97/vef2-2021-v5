@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
+import './Index.modules.scss'
 import { NewsList } from '../components/news-list/NewsList'
 
 
+const apiUrl = process.env.REACT_APP_API_URL;
 
 
-
+/**
+ * Býr til yfirlitssýðu
+ */
 export function Index() {
-  // TODO útfæra yfirlitssíðu
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(false);
@@ -19,10 +21,8 @@ export function Index() {
       setError(null);
       let json;
 
-      const url = `https://vef2-2021-ruv-rss-json-proxy.herokuapp.com/`;
-
       try {
-        const result = await fetch(url);
+        const result = await fetch(apiUrl);
 
         if (!result.ok) {
           throw new Error('result not ok');
@@ -36,7 +36,7 @@ export function Index() {
       } finally {
         setLoading(false);
       }
-      console.log(json)
+     
       setData(json);
     }
     fetchData()
@@ -58,7 +58,7 @@ export function Index() {
 
 
   return (
-    <div>
+    <div  className="Index">
       {flokkar.length > 0 && flokkar.map((flokkur, i) => {
         const {id,url,title} = flokkur;
         return(
@@ -72,6 +72,7 @@ export function Index() {
       })
       }
     </div>
+   
     
   )
 }

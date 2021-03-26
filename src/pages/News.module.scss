@@ -1,0 +1,27 @@
+.News {
+    background-color: #f5f3e3;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    &__error {
+        background-color: white;
+        width: 31vw;
+    }
+    &__content {
+        margin: 1rem;
+        &__list {
+            list-style-type: none;
+            padding-left: 0px;
+            &__item {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &__link {
+        color: black;
+    }
+}

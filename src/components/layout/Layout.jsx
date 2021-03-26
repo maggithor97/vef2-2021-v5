@@ -1,5 +1,3 @@
-// TODO sækja Sass
-
 import s from './Layout.module.scss';
 
 
