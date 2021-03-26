@@ -1,4 +1,5 @@
 # Vefforritun 2, 2021, verkefni 5
+### Magnús Þór Valdimarsson
 
 [Kynning á verkefni](https://youtu.be/EyRD1dVVDiU).
 
