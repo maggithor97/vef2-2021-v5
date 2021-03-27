@@ -3,12 +3,9 @@
 
 https://frettasida.herokuapp.com/
 
-Til að keyra:
-
-Clone'ar verkefnið
-
-Breytir `.env.example` í `.env`
-
+Til að keyra:  
+Clone'ar verkefnið  
+Breytir `.env.example` í `.env`  
 
 ```
 npm install
